@@ -24,12 +24,3 @@ class account(models.Model):
     def __str__(self):
         return f'{self.customer}'
 
-class balance(models.Model):
-    id      = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
-    account = models.ForeignKey(account, on_delete=models.CASCADE,related_name='account')
-    type    = models.BooleanField(verbose_name='income_or_outgoing')
-    amount  = models.PositiveBigIntegerField(verbose_name='money_amount')
-    balance = models.PositiveBigIntegerField(verbose_name='actual_balance')
-
-    def __str__(self):
-        return f'{self.account}'
