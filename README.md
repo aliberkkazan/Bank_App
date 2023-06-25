@@ -1,2 +1,2 @@
 # Bank_App
-It is a simple Bank Application project with Rest Api in Django.
+This is an API prepared using Rest API and Django library, containing customer bank accounts and information of customers.
